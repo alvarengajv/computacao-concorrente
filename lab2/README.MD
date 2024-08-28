@@ -13,6 +13,7 @@ gcc -o lab2_atividade3 lab2_atividade3.c -pthread
 joao@DESKTOP-ERIJR87:~/workspace/computacao_concorrente/lab2$ ./gerar_dados 10
 joao@DESKTOP-ERIJR87:~/workspace/computacao_concorrente/lab2$ ./lab2_atividade3 2 dados.bin
 Produto interno sequencial: 27.259979
+
 Produto interno concorrente: 27.259979
 Variação relativa: 0.000000
 
