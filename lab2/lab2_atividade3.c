@@ -5,13 +5,13 @@
 typedef struct {
     int idThread, nThreads;
     int inicio, fim;
-    float *vetor_a, *vetor_b;
-    double resultado_parcial;
+    float *vetor_a, *vetor_b;  // float *vetor_a, *vetor_b;
+    double resultado_parcial;  // float resultado_parcial;
 } t_Args;
 
 void* calcular_produto_interno(void* arg) {
     t_Args *args = (t_Args *) arg;
-    double soma = 0;
+    double soma = 0;  // float soma = 0;
 
     for (int i = args->inicio; i < args->fim; i++) {
         soma += args->vetor_a[i] * args->vetor_b[i];
@@ -45,8 +45,8 @@ int main(int argc, char* argv[]) {
     fread(vetor_a, sizeof(float), N, arquivo);
     fread(vetor_b, sizeof(float), N, arquivo);
 
-    double resultado_sequencial;
-    fread(&resultado_sequencial, sizeof(double), 1, arquivo);
+    double resultado_sequencial;  // float resultado_sequencial;
+    fread(&resultado_sequencial, sizeof(double), 1, arquivo);  // fread(&resultado_sequencial, sizeof(float), 1, arquivo);
 
     fclose(arquivo);
 
@@ -64,7 +64,7 @@ int main(int argc, char* argv[]) {
         args[i].fim = inicio + tamanho_bloco + (i < resto ? 1 : 0);
         args[i].vetor_a = vetor_a;
         args[i].vetor_b = vetor_b;
-        args[i].resultado_parcial = 0.0;
+        args[i].resultado_parcial = 0.0;  // args[i].resultado_parcial = 0.0f;
 
         pthread_create(&threads[i], NULL, calcular_produto_interno, (void*)&args[i]);
 
@@ -72,7 +72,7 @@ int main(int argc, char* argv[]) {
     }
 
     // Aguardar as threads terminarem
-    double resultado_concorrente = 0.0;
+    double resultado_concorrente = 0.0;  // float resultado_concorrente = 0.0f;
     for (int i = 0; i < nThreads; i++) {
         pthread_join(threads[i], NULL);
         resultado_concorrente += args[i].resultado_parcial;
@@ -80,6 +80,7 @@ int main(int argc, char* argv[]) {
 
     // Calcular a variação relativa
     double variacao_relativa = (resultado_sequencial - resultado_concorrente) / resultado_sequencial;
+    // float variacao_relativa = (resultado_sequencial - resultado_concorrente) / resultado_sequencial;
 
     // Exibir os resultados
     printf("Produto interno sequencial: %f\n", resultado_sequencial);
