@@ -3,7 +3,7 @@ Disciplina: Programacao Concorrente
 
 Profa.: Silvana Rossetto 
 
-Codigo: Incrementando um vetor usando threads em C e aguardando as threads terminarem 
+Codigo: Multiplicação de Matrizes
 
 João Vitor Lopes Alvarenga - 120152276
 
