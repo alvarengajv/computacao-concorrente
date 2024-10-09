@@ -16,7 +16,7 @@ cd lab/lab6
 gcc -o atividade3 atividade3.c list_int.c -lpthread
 
 ## Executar código
-./atividade3 <numero de threads>
+./atividade3 [número de threads]
 
 # Análise:
 O programa assegura que escritores tenham prioridade sobre os leitores. Isso é visível nos logs:
