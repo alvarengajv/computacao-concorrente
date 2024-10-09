@@ -16,7 +16,7 @@
 #include <pthread.h>
 #include "timer.h"
 
-#define QTDE_OPS 100 // quantidade de operacoes sobre a lista
+#define QTDE_OPS 10000000 // quantidade de operacoes sobre a lista
 #define QTDE_INI 100 // quantidade de insercoes iniciais na lista
 #define MAX_VALUE 100 // valor maximo a ser inserido
 
