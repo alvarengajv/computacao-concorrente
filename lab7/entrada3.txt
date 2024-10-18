@@ -1,0 +1,9 @@
+Objetivos da Disciplina:
+● Apresentar o paradigma de programação concorrente e os princípios da programação
+paralela e distribuída, capacitando o aluno a construir programas de computador com mais
+de um fluxo independente de execução.
+● Discutir exemplos de problemas cuja solução computacional pode beneficiar-se da
+programação concorrente para reduzir o tempo de processamento ou modelar de forma
+mais adequada o funcionamento das entidades do problema.
+● Capacitar o aluno para tratar com eficiência os desafios da programação concorrente e
+explorar seus benefícios.
